@@ -33,6 +33,9 @@ On the first call, the function parses the CSV and saves a `.mat` file in the sa
 | `theta` | `1 × numTheta` | Theta angles (degrees) |
 | `freqs` | `1 × numFreqs` | Frequencies (Hz) |
 
+### Data Format
+All data matrices (`D_total`, `D_phi`, `D_theta`) are formatted as a `numPhi × numTheta × numFreqs` array. Therefore, to get a pattern at a particular frequency, all that is required is `D_atFreqToPlot = D_total(:, :, freqs == freq_toPlot)`.
+
 ### Input Arguments
 
 | Argument | Description |
